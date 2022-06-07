@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class ControlSerpiente : MonoBehaviour
 {
-    public float MoveSpeed = 5;
+    public float MoveSpeed = 4;
     public float steerSpeed = 180;
     public GameObject CuerpoPrefab;
     public int gap = 10;
-    public float VelocidadCuerpo = 5;
+    public float VelocidadCuerpo = 4;
 
     private List<GameObject> PartesCuerpo = new List<GameObject> ();
     private List<Vector3> PosicionSerpiente = new List<Vector3>();
@@ -40,20 +40,21 @@ public class ControlSerpiente : MonoBehaviour
             index++;
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Serpiente")
+        {
+            Destroy(other.gameObject);
+            CrecerSerpiente();
 
+        }
+
+    }
     private void CrecerSerpiente()
     {
         GameObject Cuerpo = Instantiate(CuerpoPrefab);
         PartesCuerpo.Add(Cuerpo);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "Manzanas")
-        {
-            Destroy(other.gameObject);
-            CrecerSerpiente();
-        }
-
-    }
+    
 }
