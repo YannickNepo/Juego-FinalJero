@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -181,6 +181,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &370714118 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9116127074023441437, guid: b97027eaf23380b4b8487685073cd05d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2020995860}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &370714123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370714118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23e21c80027cd884eabee7df359b249d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yo: {fileID: 370714118}
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,8 +367,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 995760790}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.21}
-  m_LocalScale: {x: 20, y: 1, z: 20}
+  m_LocalPosition: {x: 0, y: 0, z: 0.4}
+  m_LocalScale: {x: 30, y: 1, z: 25}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -378,6 +397,35 @@ MonoBehaviour:
     type: 3}
   gap: 10
   VelocidadCuerpo: 5
+--- !u!114 &1918569060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918569054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 237b62362c7133b4a8527f1861e4ee64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalPosition: {x: 0, y: 1, z: 0}
+--- !u!54 &1918569061
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918569054}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &2020995860
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -388,7 +436,7 @@ PrefabInstance:
     - target: {fileID: 1838644329925522902, guid: b97027eaf23380b4b8487685073cd05d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.555
+      value: 13.66
       objectReference: {fileID: 0}
     - target: {fileID: 1838644329925522902, guid: b97027eaf23380b4b8487685073cd05d,
         type: 3}
@@ -398,7 +446,7 @@ PrefabInstance:
     - target: {fileID: 1838644329925522902, guid: b97027eaf23380b4b8487685073cd05d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.2694445
+      value: -11
       objectReference: {fileID: 0}
     - target: {fileID: 1838644329925522902, guid: b97027eaf23380b4b8487685073cd05d,
         type: 3}
@@ -458,6 +506,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Serpiente
+      objectReference: {fileID: 0}
+    - target: {fileID: 1372025279389724142, guid: a10f3396f4d96cc499cd857e70b2b5e4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4431665250403990617, guid: a10f3396f4d96cc499cd857e70b2b5e4,
         type: 3}

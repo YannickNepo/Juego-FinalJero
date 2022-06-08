@@ -40,13 +40,14 @@ public class ControlSerpiente : MonoBehaviour
             index++;
         }
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Serpiente")
-        {
-            Destroy(other.gameObject);
-            CrecerSerpiente();
 
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "Manzanas")
+        {
+            //Destroy(gameObject);
+            CrecerSerpiente();
+            //Instantiate(PartesCuerpo,new Vector3(Random.Range(-13.0f,14.0f)));
         }
 
     }
