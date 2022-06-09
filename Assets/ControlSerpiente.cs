@@ -46,6 +46,7 @@ public class ControlSerpiente : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
+        
         xPos = Random.Range(-14, 14);
         zPos = Random.Range(-10, 10);
 

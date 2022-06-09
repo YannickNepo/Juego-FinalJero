@@ -20,7 +20,7 @@ public class EscenaPerder : MonoBehaviour
 
     public void VolveraJugar()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Juego");
     }
 
 }

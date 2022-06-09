@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ColisionSerpiente : MonoBehaviour
 {
@@ -32,8 +33,9 @@ public class ColisionSerpiente : MonoBehaviour
         if (col2.gameObject.name == "Piso")
         {
             //perdiste.SetActive(true);
-            gameObject.transform.position = originalPosition;
+            //gameObject.transform.position = originalPosition;
             //tiempo = Time.time;
+            SceneManager.LoadScene("Perder");
         }
     }
 }
