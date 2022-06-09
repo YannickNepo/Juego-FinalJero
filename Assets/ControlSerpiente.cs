@@ -53,7 +53,7 @@ public class ControlSerpiente : MonoBehaviour
         {
             //Destroy(gameObject);
             CrecerSerpiente();
-            Instantiate(Manzanas, new Vector3(xPos,1.5f, zPos), Quaternion.identity);
+            Instantiate(Manzanas, new Vector3(xPos,1.01f, zPos), Quaternion.identity);
         }
 
     }
