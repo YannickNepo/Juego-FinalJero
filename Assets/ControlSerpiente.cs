@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ControlSerpiente : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class ControlSerpiente : MonoBehaviour
     public GameObject CuerpoPrefab;
     public int gap = 10;
     public float VelocidadCuerpo = 4;
+    public float xPos, zPos;
+    public GameObject Manzanas;
 
     private List<GameObject> PartesCuerpo = new List<GameObject> ();
     private List<Vector3> PosicionSerpiente = new List<Vector3>();
@@ -43,11 +46,14 @@ public class ControlSerpiente : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
+        xPos = Random.Range(-14, 14);
+        zPos = Random.Range(-10, 10);
+
         if (other.gameObject.tag == "Manzanas")
         {
             //Destroy(gameObject);
             CrecerSerpiente();
-            //Instantiate(PartesCuerpo,new Vector3(Random.Range(-13.0f,14.0f)));
+            Instantiate(Manzanas, new Vector3(xPos,1.5f, zPos), Quaternion.identity);
         }
 
     }
